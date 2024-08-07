@@ -23,7 +23,7 @@ function Register({ navigateTo }) {
     console.log("제출할 데이터:", customerData);
 
     try {
-      await axios.post("/api/customers", customerData);
+      await axios.post("http://localhost:8080/customers", customerData);
       console.log("정보가 성공적으로 제출되었습니다!");
       navigateTo('waitingNumber');
     } catch (error) {
